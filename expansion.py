@@ -4,7 +4,7 @@ C = mi.Inferences
 Inference_pool = [] 
 #inp.input_rules 
 for i in C:
-    if i[0] == "Similar" and i[1][0] == "Angle" and i[1][1] == "Angle":
+    if i[0] == "Similar" and i[1][0] == "Angle_Angle" and i[1][1] =="Angle_Angle":
         a1 = inp.angles_one[0]
         a2 = inp.angles_one[1]
         for angle1 in inp.angles_two:
@@ -12,11 +12,32 @@ for i in C:
             for angle2 in inp.angles_two:
                 if angle2 != angle1:
                     b2 = angle2
-                    Inference_pool.append(("Similar", "Angle_Angle", (a1, b1), (a2,
-                                                                            b2)))
+                    Inference_pool.append(("Similar",(("Angle_Angle", (a1,
+                                                                       b1)),
+                                           ("Angle_Angle", (a2, b2)))))
+    if i[0] == "Angle_Angle" and i[1] == "Intersect_lines":
+        for angle1 in inp.angles_one:
+            a1 = angle1
+            for angle2 in inp.angles_two:
+                b1 = angle2
+                if a1[1] == b1[1]:
+                    Inference_pool.append((("Angle_Angle", (a1, b1)),
+                                           (("Intersect_lines", ((a1[0], b1[0]),
+                                                               (a1[1],
+                                                                b1[1]))),
+                                            ("NOP"))))
+                    Inference_pool.append((("Angle_Angle", (a1, b1)),
+                                           (("Intersect_lines", ((a1[0], b1[1]),
+                                                               (a1[1],
+                                                                b1[0]))),
+                                            ("NOP"))))
+                    
 
 
-print Inference_pool
+
+
+for element in Inference_pool:
+    print element
 
 
 
