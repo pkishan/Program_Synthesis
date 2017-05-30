@@ -1,5 +1,5 @@
 
 Inferences = []
-Inferences.append(("S",("A", "A")))
+Inferences.append(("Similar",("Angle", "Angle")))
 
 
