@@ -32,8 +32,13 @@ for i in C:
                                                                 b1[0]))),
                                             ("NOP"))))
                     
-
-
+    if i[0] == "Angle_Angle" and i[1] == (("Parallel", "Across")):
+        for angle1 in inp.angles_one:
+            a1 = angle1
+            for angle2 in inp.angles_two:
+                b1 - angle2
+                Inference_pool.append((("Angle_Angle", (a1, b1)))) 
+                #Complete this but take care of what to write 
 
 
 for element in Inference_pool:
