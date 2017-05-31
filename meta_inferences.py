@@ -4,5 +4,5 @@
 Inferences = []
 Inferences.append(("Similar",("Angle_Angle", "Angle_Angle")))
 Inferences.append((("Angle_Angle"),("Intersect_lines")))
-
+Inferences.append((("Angle_Angle"), ("Parallel", "Across")))
 
