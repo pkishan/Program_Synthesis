@@ -3,6 +3,11 @@ import input as inp
 C = mi.Inferences
 Inference_pool = [] 
 #inp.input_rules 
+
+for element in inp.User_Rules:
+    Inference_pool.append((element, "NULL"))
+
+
 for i in C:
     if i[0] == "Similar" and i[1][0] == "Angle_Angle" and i[1][1] =="Angle_Angle":
         a1 = inp.angles_one[0]
@@ -36,13 +41,33 @@ for i in C:
         for angle1 in inp.angles_one:
             a1 = angle1
             for angle2 in inp.angles_two:
-                b1 - angle2
-                Inference_pool.append((("Angle_Angle", (a1, b1)))) 
+                b1 = angle2
+                Inference_pool.append((("Angle_Angle", (a1, b1)) )) 
                 #Complete this but take care of what to write 
 
 
 for element in Inference_pool:
     print element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
