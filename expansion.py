@@ -49,6 +49,13 @@ for i in C:
                                                                    b1[1]),
                                                                    (a1[1],
                                                                     b1[1])) )) 
+                Inference_pool.append((("Angle_Angle", (a1, b1)), (("Parallel",
+                                                                   "Across"),((a1[0],
+                                                                             a1[1])),
+                                                                  (b1[0],
+                                                                   b1[1]),
+                                                                   (b1[1],
+                                                                    a1[1])) )) 
                 #Note that we have to take all the possible combinations of the
                 #vertices so that at least one of them matches the input by the
                 #user.
