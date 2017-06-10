@@ -7,6 +7,9 @@ defined in the sides array.
 When mentioning an angle we will use the same allignments as the one used in
 the angles array
 
+When defining line segments that are accross triangles then use the vertex form
+the first triangle first and then the second triangles and also always mention
+the line segments with earlier vertex first
 """
 #END OF CONVENTIONS
 
