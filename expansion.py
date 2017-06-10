@@ -28,12 +28,12 @@ for i in C:
                 if a1[1] == b1[1]:
                     Inference_pool.append((("Angle_Angle", (a1, b1)),
                                            (("Intersect_lines", ((a1[0], b1[0]),
-                                                               (a1[1],
-                                                                b1[1]))),
+                                                               (a1[2],
+                                                                b1[2]))),
                                             ("NOP"))))
                     Inference_pool.append((("Angle_Angle", (a1, b1)),
-                                           (("Intersect_lines", ((a1[0], b1[1]),
-                                                               (a1[1],
+                                           (("Intersect_lines", ((a1[0], b1[2]),
+                                                               (a1[2],
                                                                 b1[0]))),
                                             ("NOP"))))
                     
